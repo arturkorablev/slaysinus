@@ -1,0 +1,30 @@
+.moments-section { border-top:1px solid #302b24; }
+.moments-heading { align-items:center; }
+.moments-heading .section-desc { font-size:14px; }
+.moments-widget { min-width:0; }
+.moments-frame { position:relative; width:100%; height:clamp(260px,55svh,520px); overflow:hidden; touch-action:pan-y; }
+.moments-track { position:absolute; top:50%; left:50%; display:flex; align-items:center; gap:24px; }
+.moments-track,.moments-card { transition:none!important; }
+.moments-card { position:relative; display:grid; place-items:center; flex:none; min-width:0; padding:0; border:0; border-radius:8px; overflow:hidden; background:#0d0e10; }
+.moments-media,.moments-preview img { display:block; width:100%; height:100%; min-height:0; object-fit:contain; }
+.moments-preview { opacity:.45; cursor:pointer; transition:opacity 200ms; }
+.moments-preview:hover,.moments-preview:focus-visible { opacity:.85; }
+.moments-preview:focus-visible { outline-offset:-3px; }
+.moments-video-label { position:absolute; left:12px; bottom:12px; padding:5px 9px; background:#08090bd9; border-radius:4px; color:#f1ddbd; font-size:12px; }
+.moments-message { position:absolute; inset:0; display:grid; place-items:center; padding:20px; color:#d1c5b3; text-align:center; pointer-events:none; font-size:13px; }
+.moments-message[hidden] { display:none; }
+.moments-toolbar { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; margin-top:20px; }
+.moments-navigation { display:flex; align-items:center; gap:20px; }
+.moments-counter { min-width:104px; text-align:center; color:#e7d6bd; font-size:13px; font-variant-numeric:tabular-nums; }
+.moments-pause { min-height:44px; padding:10px 16px; border:1px solid #756044; border-radius:6px; color:#f1d0a2; background:transparent; cursor:pointer; font-size:13px; font-weight:700; }
+.moments-pause:hover { background:#251c13; }
+.moments-widget button:disabled { opacity:.45; cursor:default; }
+.moments-hint { color:#b8ada0; font-size:12px; line-height:1.7; margin:16px 0 0; }
+@media(max-width:600px) {
+  .moments-frame { height:clamp(250px,52svh,440px); }
+  .moments-card { border-radius:6px; }
+  .moments-navigation { width:100%; justify-content:space-between; }
+  .moments-pause { width:100%; }
+  .moments-toolbar { gap:12px; }
+}
+@media(prefers-reduced-motion:reduce) { .moments-preview { transition:none; } }

@@ -1,0 +1,10 @@
+/* A single continuous background spans the document without tile boundaries. */
+body { position:relative; min-height:100vh; background:#08090b; isolation:isolate; }
+body::before {
+  content:""; position:absolute; inset:0; z-index:-1; pointer-events:none; opacity:1;
+  background:url('design-options/obsidian-continuous.svg') center top / 100% 100% no-repeat;
+  filter:none;
+  -webkit-mask-image:linear-gradient(to right,#000 0%,rgba(0,0,0,.85) 10%,rgba(0,0,0,.25) 23%,transparent 38%,transparent 62%,rgba(0,0,0,.25) 77%,rgba(0,0,0,.85) 90%,#000 100%);
+  mask-image:linear-gradient(to right,#000 0%,rgba(0,0,0,.85) 10%,rgba(0,0,0,.25) 23%,transparent 38%,transparent 62%,rgba(0,0,0,.25) 77%,rgba(0,0,0,.85) 90%,#000 100%);
+}
+.hero-v4 { background:transparent; }
